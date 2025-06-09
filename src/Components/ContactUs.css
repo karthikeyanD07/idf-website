@@ -1,0 +1,114 @@
+.contact-container {
+  
+  padding: 100px 20px 40px; /* added top padding to clear fixed header */
+  background-color: #ffffff;
+  color: #004d40;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-heading {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #007476;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-form {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007476;
+  box-shadow: 0 0 6px rgba(0, 116, 118, 0.2);
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #007476;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005f5b;
+}
+
+.contact-info {
+  flex: 1 1 45%;
+  background-color: #e0f2f1;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.8;
+  box-shadow: 0 4px 10px rgba(0, 116, 118, 0.1);
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+  color: #004d40;
+}
+
+.contact-info a {
+  color: #007476;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 40px;
+  border: 3px solid #007476;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 400px;
+  box-shadow: 0 4px 12px rgba(0, 116, 118, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-form, .contact-info {
+    flex: 1 1 100%;
+  }
+}
