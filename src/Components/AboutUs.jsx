@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./AboutUs.css";
+import { MdAgriculture } from "react-icons/md";
+import { MdDirectionsCar, MdFlight } from "react-icons/md";
+import { GiSpanner } from "react-icons/gi";
+import { FcAutomotive } from "react-icons/fc";
 
 export default function AboutUs() {
   useEffect(() => {
@@ -11,13 +15,22 @@ export default function AboutUs() {
   return (
     <div className="about-container">
       {/* Hero Banner */}
-      <section className="about-hero" data-aos="fade-down">
-        <h1>About Indesfarm</h1>
-        <p>
-          We design, prototype, and manufacture cutting-edge embedded solutions 
-          for industrial, agricultural, automotive, and consumer markets.
-        </p>
-      </section>
+  <section className="about-hero" data-aos="fade-down" style={{ position: 'relative', overflow: 'hidden' }}>
+  {/* Background Icons container */}
+  <div className="hero-icon-background">
+    <MdAgriculture size={150} color="#007476" />
+    <MdFlight size={150} color="#007476" />
+    <GiSpanner size={150} color="#007476" />
+    <MdDirectionsCar size={150} color="#007476" />
+  </div>
+
+  {/* Foreground content */}
+  <h1>About Indesfarm</h1>
+  <p>
+    We design, prototype, and manufacture cutting-edge embedded solutions 
+    for industrial, agricultural, automotive, and consumer markets.
+  </p>
+</section>
 
       {/* Our Story */}
       <section className="about-story" data-aos="fade-up">

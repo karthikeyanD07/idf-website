@@ -10,12 +10,31 @@
    font-family: 'Segoe UI', sans-serif;
    color: #004d40;
 }
+.hero-icon-background {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  opacity: 0.1; /* transparent */
+  pointer-events: none; /* let clicks pass through */
+  z-index: 0;
+}
+.hero-icon-background svg {
+  user-select: none;
+}
 
 /* Hero */
 .about-hero {
-    padding-top: 60px;
-   text-align: center;
-   margin-bottom: 4rem;
+   position: relative;
+  padding: 60px 20px; /* space around content */
+  text-align: center;
+  overflow: hidden; /* clip background icons */
+  z-index: 1;
 }
 /* <-- add this: ensures the h1 is scrolled down by 100px */
 .about-hero h1 {
