@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminPage from "./Components/Blog/Pages/AdminPage";
+import PublicPage from "./Components/Blog/Pages/PublicPage";
 
 import Header from "./Components/Header";
 import Home from "./Components/Home";
@@ -7,6 +9,8 @@ import AboutUs from "./Components/AboutUs";    // ← one import only
 import ContactUs from "./Components/ContactUs";
 import Footer from "./Components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Products from "./Components/Products";
+import Services from "./Components/Services";
 
 
 function App() {
@@ -16,11 +20,16 @@ function App() {
     <Router>
       <Header setBlurred={setIsBlurred} />
 
-      <div className={`main-content ${isBlurred ? "blurred" : ""}`}>
+      <div className={`main-content `}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/blogs" element={<PublicPage />} />
+          <Route path="/admin/blogs" element={<AdminPage />} />
+          <Route path="/products" element={<Products/>}/>
+          <Route path="/services" element={<Services/>}/>
+
         </Routes>
       </div>
 

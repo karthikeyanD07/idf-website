@@ -153,6 +153,7 @@
 
 .main-content {
   transition: filter 0.3s ease;
+  margin-top: 120px; /* adjust based on header height */
 }
 
 .main-content.blurred {

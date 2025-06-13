@@ -47,6 +47,7 @@ export default function Header({ setBlurred }) {
 
         <nav className="nav-links">
           <Link to="/about" onClick={() => setBlurred(false)}>About Us</Link>
+          <Link to="/blogs" onClick={()=> setBlurred(false)}>Blogs</Link>
 
 
           <div
@@ -58,13 +59,13 @@ export default function Header({ setBlurred }) {
               Products <ChevronDown size={16} />
             </button>
             <div className={`dropdown-menu ${showProducts ? 'show' : ''}`}>
-              <a href="#product1">3-Phase BLDC-Driver</a>
-              <a href="#product2">Feedback Board with IoT</a>
-              <a href="#product3">Gateway Board</a>
-              <a href="#product4">Single Phase BLDC Driver</a>
-              <a href="#product5">Temperature and Monitor Control Board</a>
-              <a href="#product6">BLE 5.0 Master Board</a>
-              <a href="#product7">BLE 5.0 Slave Board</a>
+             <Link to="/products#product1">3-Phase BLDC-Driver</Link>
+              <Link to="/products#product2">Feedback Board with IoT</Link>
+              <Link to="/products#product3">Gateway Board</Link>
+              <Link to="/products#product4">Single Phase BLDC Driver</Link>
+              <Link to="/products#product5">Temperature and Monitor Control Board</Link>
+              <Link to="/products#product6">BLE 5.0 Master Board</Link>
+              <Link to="/products#product7">BLE 5.0 Slave Board</Link>
             </div>
           </div>
 
@@ -77,11 +78,11 @@ export default function Header({ setBlurred }) {
               Capabilities <ChevronDown size={16} />
             </button>
             <div className={`dropdown-menu ${showServices ? 'show' : ''}`}>
-              <a href="#service1">EMS Service</a>
-              <a href="#service2">Component Procurement</a>
-              <a href="#service3">Assembly</a>
-              <a href="#service4">Wire Harness</a>
-              <a href="#service5">Mechanical Design</a>
+              <Link to="services/#service1">EMS Service</Link>
+              <Link to="services/#service2">Component Procurement</Link>
+              <Link to="services/#service3">Assembly</Link>
+              <Link to="services/#service4">Wire Harness</Link>
+              <Link to="services/#service5">Mechanical Design</Link>
             </div>
           </div>
 

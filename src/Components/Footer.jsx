@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.css";
+import { RiAdminFill } from "react-icons/ri";
+
 
 export default function Footer() {
   return (
@@ -15,6 +17,7 @@ export default function Footer() {
             End-to-end embedded & manufacturing services for industrial, agricultural,<br/>
             automotive and consumer markets.
           </p>
+        
         </div>
         <div className="footer-col">
           <h4>Quick Links</h4>
@@ -42,6 +45,7 @@ export default function Footer() {
             <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
             <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
             <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="http://localhost:5173/admin/blogs"><RiAdminFill /></a>
           </div>
         </div>
       </div>
