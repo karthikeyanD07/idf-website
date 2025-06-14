@@ -22,9 +22,9 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul className="footer-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#industries">Industries</a></li>
+            <li><a href="http://localhost:5173/services/#service1">Services</a></li>
+            <li><a href="http://localhost:5173/products#product1">Product</a></li>
+            <li><a href="">Industries</a></li>
             <li><a href="http://localhost:5173/contact">Contact Us</a></li>
           </ul>
         </div>
