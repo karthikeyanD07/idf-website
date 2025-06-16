@@ -1,43 +1,62 @@
-// BlogPage.jsx or wherever you're showing blog posts
-
+import './Blog.css';
 import { useEffect, useState } from 'react';
-import { client } from '../sanityClient'; // your configured sanity client
+import { client } from '../sanityClient';
 import { PortableText } from '@portabletext/react';
 
 function BlogPage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    client.fetch(`*[_type == "post"]{
-      title,
-      slug,
-      body,
-      publishedAt,
-      mainImage {
-        asset-> {
-          url
+    client
+      .fetch(`*[_type == "post"] | order(publishedAt desc){
+        title,
+        slug,
+        body,
+        publishedAt,
+        mainImage {
+          asset-> {
+            url
+          }
         }
-      }
-    }`).then((data) => setPosts(data));
+      }`)
+      .then((data) => setPosts(data));
   }, []);
 
   return (
-    <div>
-      <h1>Blog Posts</h1>
-      <h1>shbvjhbjvbdfjbjdbvjbjdxv</h1>
-      {posts.map((post) => (
-        <div key={post.slug.current}>
-          <h2>{post.title}</h2>
-          {post.mainImage && (
-            <img src={post.mainImage.asset.url} alt={post.title} width="300" />
-          )}
-          <p>{new Date(post.publishedAt).toDateString()}</p>
+    <main className="blog-container">
+      <header>
+        <h1 className="blog-heading">Blog Posts</h1>
+      </header>
 
-          {/* ✅ Here’s where you use PortableText */}
-          <PortableText value={post.body} />
-        </div>
-      ))}
-    </div>
+      {posts.length === 0 ? (
+        <p className="blog-date">No posts available at the moment.</p>
+      ) : (
+        posts.map((post) => (
+          <article key={post.slug.current} className="blog-post">
+            <h2 className="blog-title">{post.title}</h2>
+            <p className="blog-date">
+              {new Date(post.publishedAt).toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
+            </p>
+
+            {post.mainImage?.asset?.url && (
+              <img
+                src={post.mainImage.asset.url}
+                alt={post.title}
+                className="blog-image"
+              />
+            )}
+
+            <section className="blog-content">
+              <PortableText value={post.body} />
+            </section>
+          </article>
+        ))
+      )}
+    </main>
   );
 }
 
