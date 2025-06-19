@@ -11,7 +11,8 @@ import Footer from "./Components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Products from "./Components/Products";
 import Services from "./Components/Services";
-import Blog from "./Components/Blog"
+import Blog from "./Components/BlogList"
+import BlogDetail from "./Components/BlogDetail";
 
 function App() {
   const [isBlurred, setIsBlurred] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/blogs" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/admin/blogs" element={<AdminPage />} />
           <Route path="/products" element={<Products/>}/>
           <Route path="/services" element={<Services/>}/>
