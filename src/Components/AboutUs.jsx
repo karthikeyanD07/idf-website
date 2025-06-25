@@ -60,17 +60,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="about-timeline" data-aos="fade-up">
-        <h2>Milestones</h2>
-        <ul>
-          <li><strong>2010:</strong> Company founded in Chennai</li>
-          <li><strong>2013:</strong> First embedded controller shipped</li>
-          <li><strong>2016:</strong> Moved into dedicated manufacturing facility</li>
-          <li><strong>2019:</strong> Expanded into agricultural technology</li>
-          <li><strong>2022:</strong> Reached 1M+ units produced</li>
-        </ul>
-      </section>
+      
 
       {/* Our Team */}
       <section className="about-team" data-aos="fade-up">
