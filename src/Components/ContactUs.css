@@ -1,6 +1,6 @@
 .contact-container {
   
-  padding: 100px 20px 40px; /* added top padding to clear fixed header */
+  padding:   20px; /* added top padding to clear fixed header */
   background-color: #ffffff;
   color: #004d40;
   font-family: 'Segoe UI', sans-serif;

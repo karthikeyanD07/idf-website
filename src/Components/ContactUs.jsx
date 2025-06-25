@@ -7,12 +7,20 @@ export default function ContactUs() {
       <h1 className="contact-heading">Contact Us</h1>
 
       <div className="contact-content">
-        {/* Contact Form */}
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
+        {/* ✅ Contact Form with Formspree */}
+        <form
+          className="contact-form"
+          action="https://formspree.io/f/xanjlega"  // 🔁 Replace this with your real Formspree ID
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+          {/* Optional anti-spam hidden field */}
+          <input type="text" name="_gotcha" style={{ display: 'none' }} />
+
           <button type="submit">Send Message</button>
         </form>
 
@@ -42,7 +50,7 @@ export default function ContactUs() {
         </div>
       </div>
 
-      {/* Embedded Google Map */}
+      {/* Google Map */}
       <div className="map-container">
         <iframe
           title="Indesfarm Location"
