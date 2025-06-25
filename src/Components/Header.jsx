@@ -85,7 +85,7 @@ export default function Header({ setBlurred }) {
               <Link to="services/#service5">Mechanical Design</Link>
             </div>
           </div>
-
+          <Link to="/products">Products</Link>
           <Link to="/contact">Contact Us</Link>
         </nav>
       </div>

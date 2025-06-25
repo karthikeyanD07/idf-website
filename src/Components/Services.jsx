@@ -43,7 +43,13 @@ export default function Services() {
 
   return (
     <div style={pageStyle}>
-      <h1 style={{ fontSize: "2rem", marginBottom: "2rem", color: "#1b1b1b" }}>
+            <h1
+        style={{
+          fontSize: "2.5rem",
+          marginBottom: "2rem",
+          textAlign: "center",
+        }}
+      >
         Our Services
       </h1>
 
@@ -84,3 +90,4 @@ export default function Services() {
     </div>
   );
 }
+
