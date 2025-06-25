@@ -50,7 +50,7 @@ export default function Header({ setBlurred }) {
           <Link to="/blogs" onClick={()=> setBlurred(false)}>Blogs</Link>
 
 
-          <div
+          {/* <div
             className="nav-item"
             onMouseEnter={() => handleEnter(setShowProducts)}
             onMouseLeave={() => handleLeave(setShowProducts)}
@@ -67,7 +67,7 @@ export default function Header({ setBlurred }) {
               <Link to="/products#product6">BLE 5.0 Master Board</Link>
               <Link to="/products#product7">BLE 5.0 Slave Board</Link>
             </div>
-          </div>
+          </div> */}
 
           <div
             className="nav-item"

@@ -14,6 +14,7 @@ import Services from "./Components/Services";
 import Blog from "./Components/BlogList"
 import BlogDetail from "./Components/BlogDetail";
 import ProductList from "./Components/ProductList";
+import ProductDetail from "./Components/ProductDetail";
 
 function App() {
   const [isBlurred, setIsBlurred] = useState(false);
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/products" element={<ProductList />} />
+          <Route path="/product/:slug" element={<ProductDetail />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/admin/blogs" element={<AdminPage />} />
           <Route path="/products" element={<Products/>}/>
