@@ -96,7 +96,7 @@ export default function Home() {
 
           {/* View More Card */}
           <div className="product-card view-more-card">
-            <a href="/products" className="view-more-link">
+            <a href="/products#product1" className="view-more-link">
               <div className="view-more-content">
                 <span>➯</span>
                 <h3>View More</h3>
