@@ -379,3 +379,62 @@
   line-height: 1.5;
   color: #333;
 }
+
+@media (max-width: 768px) {
+  .hero-carousel-section {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .carousel-wrapper {
+    padding-right: 0;
+    margin-top: 1rem;
+  }
+
+  .product-card-wrapper,
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .service-img {
+    max-width: 100px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .vertical-roadmap {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .roadmap-step {
+    padding-left: 0;
+  }
+
+  .roadmap-dot {
+    display: none;
+  }
+
+  .roadmap-card {
+    text-align: center;
+  }
+}
+
