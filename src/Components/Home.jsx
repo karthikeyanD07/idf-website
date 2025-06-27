@@ -3,11 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 
-// ✅ Correctly import product images from assets
-import buckConverterImg from "../assets/100vbuckconverter.png";
-import relayBoardImg from "../assets/relayboard.png";
-import routerUpsImg from "../assets/routerups.png";
-
 export default function Home() {
   const GIF_URL =
     "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhcjI3Z2x6bXdjc3JsZ3QzcjhuMHh5MjVocWJ6cDhmMnpvc3d0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mFDWuDppjQJjite6FS/giphy.gif";
@@ -41,10 +36,11 @@ export default function Home() {
   ];
 
   const featuredProducts = [
-    { name: "100V Buck Converter", image: buckConverterImg },
-    { name: "Relay Board", image: relayBoardImg },
-    { name: "Router UPS", image: routerUpsImg },
-  ];
+  { name: "100V Buck Converter", image: "/100vbuckconverter.png" },
+  { name: "Relay Board", image: "/relayboard.png" },
+  { name: "Router UPS", image: "/routerups.png" },
+];
+
 
   useEffect(() => {
     AOS.init({ once: true });
