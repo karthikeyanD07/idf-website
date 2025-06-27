@@ -99,7 +99,7 @@
   height: 2rem;
 }
 
-/* === Featured Products === */
+/* Featured Products */
 .product-container {
   background: #e0f7f6;
   text-align: center;
@@ -156,13 +156,11 @@
   display: none;
 }
 
-/* View More Card */
 .view-more-card {
   background: linear-gradient(135deg, hsl(181, 100%, 85%), hwb(170 45% 0%));
   color: #ffffff;
   border-radius: 12px;
-  padding: 5rem 1rem;
-  padding-top: 20px;
+  padding: 2rem 1rem;
   box-shadow: 0 8px 20px rgba(0, 116, 118, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -180,7 +178,7 @@
 .view-more-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 310px;
+  margin-top: 1rem;
 }
 
 .view-more-card span {
@@ -312,7 +310,7 @@
   margin-bottom: 0.4rem;
 }
 
-/* Concept to Manufacturing Roadmap */
+/* Roadmap */
 .concept-roadmap-section {
   margin-top: 6rem;
   background: #f0fdfa;
@@ -380,6 +378,7 @@
   color: #333;
 }
 
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .hero-carousel-section {
     flex-direction: column;
@@ -410,14 +409,8 @@
     max-width: 100px;
   }
 
-  .footer-container {
-    flex-direction: column;
+  .service-content {
     text-align: center;
-    gap: 2rem;
-  }
-
-  .footer-col {
-    width: 100%;
   }
 
   .vertical-roadmap {
@@ -436,5 +429,12 @@
   .roadmap-card {
     text-align: center;
   }
-}
 
+  .view-more-card {
+    padding: 2rem 1rem;
+  }
+
+  .view-more-card h3 {
+    margin-top: 1rem;
+  }
+}
