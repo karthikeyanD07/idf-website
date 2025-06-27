@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import AdminPage from "./Components/Blog/Pages/AdminPage";
 import PublicPage from "./Components/Blog/Pages/PublicPage";
 
