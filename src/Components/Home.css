@@ -2,7 +2,7 @@
 
 /* Base Container */
 .home-container {
-  margin-top: 50px;
+  margin-top: 0px;
   padding-top: 100px;
   padding-bottom: 150px;
   background-color: transparent;
@@ -42,17 +42,18 @@
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-radius: 12px;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 2rem;
 }
 
 .hero-text {
   flex: 1 1 45%;
   max-width: 500px;
-  text-align: center;
-  padding-left: 60px;
+  padding-left: 0;
+  text-align: left;
 }
 
 .hero-text h1 {
@@ -84,8 +85,10 @@
 .carousel-wrapper {
   flex: 1 1 50%;
   max-width: 500px;
-  margin-top: 1rem;
-  padding-right: 40px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-gif {
@@ -99,7 +102,7 @@
   height: 2rem;
 }
 
-/* Featured Products */
+/* === Featured Products === */
 .product-container {
   background: #e0f7f6;
   text-align: center;
@@ -160,7 +163,8 @@
   background: linear-gradient(135deg, hsl(181, 100%, 85%), hwb(170 45% 0%));
   color: #ffffff;
   border-radius: 12px;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
+  padding-top: 20px;
   box-shadow: 0 8px 20px rgba(0, 116, 118, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -178,7 +182,7 @@
 .view-more-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 310px;
 }
 
 .view-more-card span {
@@ -188,7 +192,6 @@
   margin-top: 8px;
 }
 
-/* Services */
 .services-section {
   padding: 2rem 1rem;
 }
@@ -255,7 +258,6 @@
   margin: 0;
 }
 
-/* Industries */
 .industries-section {
   background: #fff;
   padding: 4rem 1rem;
@@ -310,7 +312,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* Roadmap */
 .concept-roadmap-section {
   margin-top: 6rem;
   background: #f0fdfa;
@@ -378,11 +379,11 @@
   color: #333;
 }
 
-/* Responsive Fixes */
 @media (max-width: 768px) {
   .hero-carousel-section {
     flex-direction: column;
     padding: 1.5rem 1rem;
+    gap: 1.5rem;
   }
 
   .hero-text {
@@ -392,7 +393,7 @@
 
   .carousel-wrapper {
     padding-right: 0;
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   .product-card-wrapper,
@@ -409,8 +410,14 @@
     max-width: 100px;
   }
 
-  .service-content {
+  .footer-container {
+    flex-direction: column;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-col {
+    width: 100%;
   }
 
   .vertical-roadmap {
@@ -428,13 +435,5 @@
 
   .roadmap-card {
     text-align: center;
-  }
-
-  .view-more-card {
-    padding: 2rem 1rem;
-  }
-
-  .view-more-card h3 {
-    margin-top: 1rem;
   }
 }

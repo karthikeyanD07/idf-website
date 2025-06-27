@@ -3,6 +3,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 
+// ✅ Correctly import product images from assets
+import buckConverterImg from "../assets/100vbuckconverter.png";
+import relayBoardImg from "../assets/relayboard.png";
+import routerUpsImg from "../assets/routerups.png";
+
 export default function Home() {
   const GIF_URL =
     "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhcjI3Z2x6bXdjc3JsZ3QzcjhuMHh5MjVocWJ6cDhmMnpvc3d0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mFDWuDppjQJjite6FS/giphy.gif";
@@ -33,6 +38,12 @@ export default function Home() {
       img: "https://cdn-icons-png.flaticon.com/128/14537/14537029.png",
       desc: "Protective equipment and tools designed for electrostatic discharge safety.",
     },
+  ];
+
+  const featuredProducts = [
+    { name: "100V Buck Converter", image: buckConverterImg },
+    { name: "Relay Board", image: relayBoardImg },
+    { name: "Router UPS", image: routerUpsImg },
   ];
 
   useEffect(() => {
@@ -66,30 +77,25 @@ export default function Home() {
       <section className="product-container" id="products">
         <h2 className="product-heading">Featured Products</h2>
         <div className="product-card-wrapper">
-          {["100V Buck Converter", "Relay Board", "Router UPS"].map((item, idx) => {
-            const imageName = item.toLowerCase().replace(/\s+/g, '-');
-            const imagePath = `/products/${imageName}.png`;
-
-            return (
-              <div className="product-card" key={idx}>
-                <img
-                  src={imagePath}
-                  alt={item}
-                  className="product-icon"
-                />
-                <h3>{item}</h3>
-                <p>
-                  High-quality {item.toLowerCase()} for industrial-grade applications.
-                </p>
-              </div>
-            );
-          })}
+          {featuredProducts.map((product, idx) => (
+            <div className="product-card" key={idx}>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="product-icon"
+              />
+              <h3>{product.name}</h3>
+              <p>
+                High-quality {product.name.toLowerCase()} for industrial-grade applications.
+              </p>
+            </div>
+          ))}
 
           {/* View More Card */}
           <div className="product-card view-more-card">
             <a href="/products" className="view-more-link">
               <div className="view-more-content">
-                <span>🔍</span>
+                <span>➯</span>
                 <h3>View More</h3>
               </div>
             </a>
@@ -124,7 +130,7 @@ export default function Home() {
         <div className="industries-grid">
           <div className="industry-card">
             <h3>Industrial</h3>
-            <p>Solutions for manufacturing &amp; automation.</p>
+            <p>Solutions for manufacturing & automation.</p>
           </div>
           <div className="industry-card">
             <h3>Farming</h3>
@@ -173,7 +179,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }
