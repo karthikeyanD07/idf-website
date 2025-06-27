@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 
 export default function Home() {
+  const location = useLocation();
+
   const GIF_URL =
     "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNThhcjI3Z2x6bXdjc3JsZ3QzcjhuMHh5MjVocWJ6cDhmMnpvc3d0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mFDWuDppjQJjite6FS/giphy.gif";
 
@@ -36,15 +39,26 @@ export default function Home() {
   ];
 
   const featuredProducts = [
-  { name: "100V Buck Converter", image: "/100vbuckconverter.png" },
-  { name: "Relay Board", image: "/relayboard.png" },
-  { name: "Router UPS", image: "/routerups.png" },
-];
-
+    { name: "100V Buck Converter", image: "/100vbuckconverter.png" },
+    { name: "Relay Board", image: "/relayboard.png" },
+    { name: "Router UPS", image: "/routerups.png" },
+  ];
 
   useEffect(() => {
     AOS.init({ once: true });
   }, []);
+
+  // Scroll to hash if any
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100); // Wait for route transition to mount
+      }
+    }
+  }, [location]);
 
   return (
     <div className="home-container">
@@ -75,11 +89,7 @@ export default function Home() {
         <div className="product-card-wrapper">
           {featuredProducts.map((product, idx) => (
             <div className="product-card" key={idx}>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-icon"
-              />
+              <img src={product.image} alt={product.name} className="product-icon" />
               <h3>{product.name}</h3>
               <p>
                 High-quality {product.name.toLowerCase()} for industrial-grade applications.
@@ -147,7 +157,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Concept → Manufacturing Roadmap */}
+      {/* Roadmap */}
       <section className="concept-roadmap-section">
         <h2 className="concept-roadmap-heading">From Concept to Manufacturing</h2>
         <div className="vertical-roadmap">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { RiAdminFill } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -17,17 +17,18 @@ export default function Footer() {
             End-to-end embedded & manufacturing services for industrial, agricultural,<br/>
             automotive and consumer markets.
           </p>
-        
         </div>
+
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul className="footer-links">
-            <li><a href="/services#service1">Services</a></li>
-  <li><a href="/products#product1">Product</a></li>
-  <li><a href="/industries">Industries</a></li>
-  <li><a href="/contact">Contact Us</a></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/#industries">Industries</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
+
         <div className="footer-col">
           <h4>Contact</h4>
           <p>
@@ -38,6 +39,7 @@ export default function Footer() {
           <p>+91 92720 20458</p>
           <p>info@indesfarm.com</p>
         </div>
+
         <div className="footer-col">
           <h4>Follow Us</h4>
           <div className="footer-social">
@@ -45,7 +47,7 @@ export default function Footer() {
             <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
             <a href="#" aria-label="Facebook"><i className="fab fa-facebook"></i></a>
             <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-              <a href="http://localhost:5173/admin/blogs"><RiAdminFill /></a>
+            <a href="/admin/blogs" aria-label="Admin Panel"><RiAdminFill /></a>
           </div>
         </div>
       </div>
